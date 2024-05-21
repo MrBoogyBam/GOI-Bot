@@ -1,0 +1,25 @@
+{
+  "name": "goi-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrBoogyBam/GOI-Bot.git"
+  },
+  "author": "MrBoogyBam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MrBoogyBam/GOI-Bot/issues"
+  },
+  "homepage": "https://github.com/MrBoogyBam/GOI-Bot#readme",
+  "dependencies": {
+    "discord.js": "^14.15.2"
+  },
+  "devDependencies": {
+    "eslint": "^9.3.0"
+  }
+}
