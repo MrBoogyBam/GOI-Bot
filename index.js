@@ -2,12 +2,13 @@ const { Client, Events, GatewayIntentBits } = require('discord.js');
 const { token } = require('./config.json');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.MessageContent, GatewayIntentBits.GuildMessages] });
 
-const urlRegex = new RegExp('^(https?:\\/\\/)?'+
-    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+
-    '((\\d{1,3}\\.){3}\\d{1,3}))'+
-    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+
-    '(\\?[;&a-z\\d%_.~+=-]*)?'+
-    '(\\#[-a-z\\d_]*)?$','i');
+const urlRegex = new RegExp(
+    'https?:\\/\\/' +
+    '(www\\.)?' +
+    '[-a-zA-Z0-9@:%._\\+~#=]{1,256}' +
+    '\\.[a-zA-Z0-9()]{1,6}' +
+    '\\b' +
+    '([-a-zA-Z0-9()@:%_\\+.~#?&//=]*)','i');
 
 client.once(Events.ClientReady, readyClient => {
     console.log(`Ready! Logged in as ${readyClient.user.tag}`);
